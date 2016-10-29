@@ -20,21 +20,27 @@ module MediaSite
       end
 
       desc 'Create a Log'
-      # paramsにはそのメソッドで必須なパラメータを書く
-      params do
-        requires :title, type: String, desc: 'title'
-        requires :author_id, type: Integer, desc: 'article author id'
-      end
       post do
-        Article.create(title: params[:title], author_id: params[:author_id])
+        Log.create(start_time: Time.now)
+      end
+
+      route_param :id do
+        desc 'update'
+        params do
+          # paramsにはそのメソッドで必須なパラメータを書く
+          requires :count, type: Integer, desc: 'Log count'
+        end
+        put do
+            Log.find(params[:id]).update(end_time: Time.now, count: params[:count])
+        end
       end
 
       desc 'delete'
       params do
-        requires :id, type: Integer, desc: 'Article id'
+        requires :id, type: Integer, desc: 'Log id'
       end
-      delete ':id' do
-        Article.find(params[:id]).destroy
+      delete do
+        Log.find(params[:id]).destroy
       end
     end
 

@@ -709,3 +709,267 @@ To silence this deprecation warning, add the following:
 
     config.active_record.time_zone_aware_types = [:datetime, :time]
  (called from create_time_zone_conversion_attribute? at /Users/sc-takahashi/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/activerecord-5.0.0.1/lib/active_record/attribute_methods/time_zone_conversion.rb:96)
+Started GET "/api/v1/logs/public" for ::1 at 2016-10-29 15:39:46 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mLog Load (0.2ms)[0m  [1m[34mSELECT "logs".* FROM "logs"[0m
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To silence this deprecation warning, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from create_time_zone_conversion_attribute? at /Users/sc-takahashi/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/activerecord-5.0.0.1/lib/active_record/attribute_methods/time_zone_conversion.rb:96)
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To silence this deprecation warning, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from create_time_zone_conversion_attribute? at /Users/sc-takahashi/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/activerecord-5.0.0.1/lib/active_record/attribute_methods/time_zone_conversion.rb:96)
+Started GET "/api/v1/logs/public" for ::1 at 2016-10-29 16:10:54 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mLog Load (0.2ms)[0m  [1m[34mSELECT "logs".* FROM "logs"[0m
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To silence this deprecation warning, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from create_time_zone_conversion_attribute? at /Users/sc-takahashi/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/activerecord-5.0.0.1/lib/active_record/attribute_methods/time_zone_conversion.rb:96)
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To silence this deprecation warning, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from create_time_zone_conversion_attribute? at /Users/sc-takahashi/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/activerecord-5.0.0.1/lib/active_record/attribute_methods/time_zone_conversion.rb:96)
+Started GET "/api/v1/logs/1" for ::1 at 2016-10-29 16:12:23 +0900
+  [1m[36mLog Load (0.3ms)[0m  [1m[34mSELECT  "logs".* FROM "logs" WHERE "logs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Started POST "/api/v1/logs" for ::1 at 2016-10-29 16:12:29 +0900
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "logs" ("start_time", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["start_time", 2016-10-29 07:12:29 UTC], ["created_at", 2016-10-29 07:12:29 UTC], ["updated_at", 2016-10-29 07:12:29 UTC]]
+  [1m[35m (4.0ms)[0m  [1m[36mcommit transaction[0m
+Started PUT "/api/v1/logs/7" for ::1 at 2016-10-29 16:13:02 +0900
+Started GET "/api/v1/logs/7" for ::1 at 2016-10-29 16:13:17 +0900
+  [1m[36mLog Load (0.2ms)[0m  [1m[34mSELECT  "logs".* FROM "logs" WHERE "logs"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+Started PUT "/api/v1/logs/7" for ::1 at 2016-10-29 16:15:45 +0900
+Started PUT "/api/v1/logs/7" for ::1 at 2016-10-29 16:16:08 +0900
+Started PUT "/api/v1/logs/7" for ::1 at 2016-10-29 16:16:34 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Started PUT "/api/v1/logs" for ::1 at 2016-10-29 16:16:56 +0900
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To silence this deprecation warning, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from block (2 levels) in <class:API> at /Users/sc-takahashi/workspace/redimpulz/TK_1619/rest-server/app/api/media_site.rb:34)
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To silence this deprecation warning, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from block (2 levels) in <class:API> at /Users/sc-takahashi/workspace/redimpulz/TK_1619/rest-server/app/api/media_site.rb:34)
+  [1m[36mLog Load (0.2ms)[0m  [1m[34mSELECT  "logs".* FROM "logs" WHERE "logs"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[33mUPDATE "logs" SET "end_time" = ?, "count" = ?, "updated_at" = ? WHERE "logs"."id" = ?[0m  [["end_time", 2016-10-29 07:16:56 UTC], ["count", 5], ["updated_at", 2016-10-29 07:16:56 UTC], ["id", 7]]
+  [1m[35m (4.7ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/api/v1/logs/7" for ::1 at 2016-10-29 16:17:32 +0900
+  [1m[36mLog Load (0.2ms)[0m  [1m[34mSELECT  "logs".* FROM "logs" WHERE "logs"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+Started POST "/api/v1/logs/7" for ::1 at 2016-10-29 16:20:00 +0900
+  
+NoMethodError (undefined method `route_params' for MediaSite::API:Class
+Did you mean?  route_param):
+  
+app/api/media_site.rb:29:in `block in <class:API>'
+app/api/media_site.rb:7:in `<class:API>'
+app/api/media_site.rb:2:in `<module:MediaSite>'
+app/api/media_site.rb:1:in `<top (required)>'
+config/routes.rb:3:in `block in <top (required)>'
+config/routes.rb:1:in `<top (required)>'
+  Rendering /Users/sc-takahashi/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/sc-takahashi/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/sc-takahashi/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.9ms)
+  Rendering /Users/sc-takahashi/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/sc-takahashi/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.7ms)
+  Rendering /Users/sc-takahashi/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/sc-takahashi/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/sc-takahashi/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (113.7ms)
+Started POST "/api/v1/logs" for ::1 at 2016-10-29 16:20:14 +0900
+  
+ActionController::RoutingError (No route matches [POST] "/api/v1/logs"):
+  
+actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.3.1) lib/web_console/middleware.rb:131:in `call_app'
+web-console (3.3.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.3.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.3.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `tagged'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.6.0) lib/puma/configuration.rb:225:in `call'
+puma (3.6.0) lib/puma/server.rb:578:in `handle_request'
+puma (3.6.0) lib/puma/server.rb:415:in `process_client'
+puma (3.6.0) lib/puma/server.rb:275:in `block in run'
+puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+  Rendering /Users/sc-takahashi/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/sc-takahashi/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/sc-takahashi/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /Users/sc-takahashi/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (24.8ms)
+  Rendering /Users/sc-takahashi/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/sc-takahashi/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (13.1ms)
+  Rendered /Users/sc-takahashi/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (154.3ms)
+Started POST "/api/v1/logs" for ::1 at 2016-10-29 16:23:42 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To silence this deprecation warning, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from block (2 levels) in <class:API> at /Users/sc-takahashi/workspace/redimpulz/TK_1619/rest-server/app/api/media_site.rb:24)
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To silence this deprecation warning, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from block (2 levels) in <class:API> at /Users/sc-takahashi/workspace/redimpulz/TK_1619/rest-server/app/api/media_site.rb:24)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "logs" ("start_time", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["start_time", 2016-10-29 07:23:43 UTC], ["created_at", 2016-10-29 07:23:43 UTC], ["updated_at", 2016-10-29 07:23:43 UTC]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+Started PUT "/api/v1/logs/8" for ::1 at 2016-10-29 16:23:57 +0900
+  [1m[36mLog Load (0.3ms)[0m  [1m[34mSELECT  "logs".* FROM "logs" WHERE "logs"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "logs" SET "end_time" = ?, "count" = ?, "updated_at" = ? WHERE "logs"."id" = ?[0m  [["end_time", 2016-10-29 07:23:58 UTC], ["count", 5], ["updated_at", 2016-10-29 07:23:58 UTC], ["id", 8]]
+  [1m[35m (3.5ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/api/v1/logs/8" for ::1 at 2016-10-29 16:24:05 +0900
+  [1m[36mLog Load (0.1ms)[0m  [1m[34mSELECT  "logs".* FROM "logs" WHERE "logs"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+Started GET "/api/v1/logs/public" for ::1 at 2016-10-29 16:24:15 +0900
+  [1m[36mLog Load (0.5ms)[0m  [1m[34mSELECT "logs".* FROM "logs"[0m
+Started PUT "/api/v1/logs/8" for ::1 at 2016-10-29 16:24:47 +0900
+  [1m[36mLog Load (0.1ms)[0m  [1m[34mSELECT  "logs".* FROM "logs" WHERE "logs"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[33mUPDATE "logs" SET "end_time" = ?, "count" = ?, "updated_at" = ? WHERE "logs"."id" = ?[0m  [["end_time", 2016-10-29 07:24:47 UTC], ["count", 10], ["updated_at", 2016-10-29 07:24:47 UTC], ["id", 8]]
+  [1m[35m (19.5ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/api/v1/logs/public" for ::1 at 2016-10-29 16:24:51 +0900
+  [1m[36mLog Load (0.3ms)[0m  [1m[34mSELECT "logs".* FROM "logs"[0m
+Started PUT "/api/v1/logs/8" for ::1 at 2016-10-29 16:26:18 +0900
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To silence this deprecation warning, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from block (3 levels) in <class:API> at /Users/sc-takahashi/workspace/redimpulz/TK_1619/rest-server/app/api/media_site.rb:35)
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To silence this deprecation warning, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from block (3 levels) in <class:API> at /Users/sc-takahashi/workspace/redimpulz/TK_1619/rest-server/app/api/media_site.rb:35)
+  [1m[36mLog Load (5.4ms)[0m  [1m[34mSELECT  "logs".* FROM "logs" WHERE "logs"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[33mUPDATE "logs" SET "end_time" = ?, "updated_at" = ? WHERE "logs"."id" = ?[0m  [["end_time", 2016-10-29 07:26:18 UTC], ["updated_at", 2016-10-29 07:26:18 UTC], ["id", 8]]
+  [1m[35m (7.5ms)[0m  [1m[36mcommit transaction[0m
+Started PUT "/api/v1/logs/8" for ::1 at 2016-10-29 16:26:33 +0900
+  [1m[36mLog Load (0.1ms)[0m  [1m[34mSELECT  "logs".* FROM "logs" WHERE "logs"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[33mUPDATE "logs" SET "end_time" = ?, "updated_at" = ? WHERE "logs"."id" = ?[0m  [["end_time", 2016-10-29 07:26:33 UTC], ["updated_at", 2016-10-29 07:26:33 UTC], ["id", 8]]
+  [1m[35m (4.0ms)[0m  [1m[36mcommit transaction[0m
+Started PUT "/api/v1/logs/8" for ::1 at 2016-10-29 16:26:51 +0900
+  [1m[36mLog Load (0.3ms)[0m  [1m[34mSELECT  "logs".* FROM "logs" WHERE "logs"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "logs" SET "end_time" = ?, "updated_at" = ? WHERE "logs"."id" = ?[0m  [["end_time", 2016-10-29 07:26:51 UTC], ["updated_at", 2016-10-29 07:26:51 UTC], ["id", 8]]
+  [1m[35m (2.9ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/api/v1/logs/8" for ::1 at 2016-10-29 16:37:29 +0900
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To silence this deprecation warning, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from block (3 levels) in <class:API> at /Users/sc-takahashi/workspace/redimpulz/TK_1619/rest-server/app/api/media_site.rb:18)
+DEPRECATION WARNING: Time columns will become time zone aware in Rails 5.1. This
+still causes `String`s to be parsed as if they were in `Time.zone`,
+and `Time`s to be converted to `Time.zone`.
+
+To keep the old behavior, you must add the following to your initializer:
+
+    config.active_record.time_zone_aware_types = [:datetime]
+
+To silence this deprecation warning, add the following:
+
+    config.active_record.time_zone_aware_types = [:datetime, :time]
+ (called from block (3 levels) in <class:API> at /Users/sc-takahashi/workspace/redimpulz/TK_1619/rest-server/app/api/media_site.rb:18)
+  [1m[36mLog Load (0.3ms)[0m  [1m[34mSELECT  "logs".* FROM "logs" WHERE "logs"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
