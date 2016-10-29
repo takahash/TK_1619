@@ -129,7 +129,14 @@ module.exports = {
       from: path.join(__dirname, 'src', 'public'),
       ignore: ['index.ejs']
     }]),
-    new ProgressBarPlugin()
+    new ProgressBarPlugin(),
+    new webpack.DefinePlugin({
+      api: (() => {
+        return JSON.stringify({
+          BASE: 'http://40.74.80.95:3000/api/v1',
+        });
+      })(),
+    }),
   ],
 
   resolveLoader: {

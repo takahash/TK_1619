@@ -105,7 +105,14 @@ module.exports = {
       template: 'src/public/index.ejs',
       chunksSortMode: 'dependency'
     }),
-    new ProgressBarPlugin()
+    new ProgressBarPlugin(),
+    new webpack.DefinePlugin({
+      api: (() => {
+        return JSON.stringify({
+          BASE: 'http://40.74.80.95:3000/api/v1',
+        });
+      })(),
+    }),
   ],
 
   resolveLoader: {

@@ -8,6 +8,10 @@ export default class Settings extends React.Component {
     super(props);
   }
 
+  componentDidMount() {
+    console.log('setting');
+  }
+
   renderRow(row, index) {
     return (
       <ListItem key={index}>
