@@ -32,7 +32,7 @@ def main():
     # initialize gpio
     GPIO.setmode(GPIO.BCM)
     GPIO.setup(PIN_BEEP, GPIO.OUT)
-    GPIO.setup(PIN_STARTSW, GPIO.IN)
+    GPIO.setup(PIN_STARTSW, GPIO.IN, pull_up_down = GPIO.PUD_DOWN)
     # initialize accerelation sensor
     adxl345 = ADXL345()
     filtered_acc = [None for i in range(BUF_SIZE)]
@@ -45,7 +45,7 @@ def main():
             if (GPIO.input(PIN_STARTSW) == 1):
                 break
             else:
-                sleep(0.1)
+                sleep(0.2)
         print('いただきます！')
         while(True):
             acc = adxl345.getAxes(True)
@@ -64,7 +64,12 @@ def main():
             # print('z: {0:.3f}'.format(filtered_acc[index]['z']))
             index = (index + 1) % BUF_SIZE
             sleep(0.1)
+            if (GPIO.input(PIN_STARTSW) == 1):
+                print('ごちそうさまでした！')
+                break
     except KeyboardInterrupt:
+        GPIO.cleanup()
+    finally:
         GPIO.cleanup()
 
 if __name__ == '__main__':
