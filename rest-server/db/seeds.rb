@@ -5,3 +5,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+Log.create(:start_time => Time.now, :end_time => Time.now, :count => 5)
+Log.create(:start_time => Time.now, :end_time => Time.now, :count => 5)
+Log.create(:start_time => Time.now, :end_time => Time.now, :count => 5)
