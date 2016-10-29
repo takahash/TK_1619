@@ -3,14 +3,18 @@
 
 from time import sleep
 from math import sqrt
+import requests
+import json
 import RPi.GPIO as GPIO
 
 from adxl345 import ADXL345
 
+REST_SERVER = 'http://40.74.80.95:3000/api/v1'
+
 PIN_BEEP = 4
 PIN_STARTSW = 17
 
-THRESHOLD = 0.2
+THRESHOLD = 0.3
 BUF_SIZE = 15
 
 def lowpass3d(vec_before, vec_now):
@@ -26,6 +30,21 @@ def lowpass3d(vec_before, vec_now):
 
 def abs3d(vec):
     return sqrt(vec['x'] ** 2 + vec['y'] ** 2 + vec['z'] ** 2)
+
+def start_eating():
+    uri = REST_SERVER + '/logs'
+    res = requests.post(uri).json()
+    return res[u'id']
+
+def finish_eating(eating_id, count):
+    uri = REST_SERVER + '/logs/' + str(eating_id)
+    headers = {
+        'Content-Type': 'application/json'
+    }
+    payload = {
+        'count': count
+    }
+    requests.put(uri, headers = headers, data = json.dumps(payload))
 
 def main():
     print('program start')
@@ -47,6 +66,11 @@ def main():
             else:
                 sleep(0.2)
         print('いただきます！')
+        try:
+            eating_id = start_eating()
+        except:
+            print('server down?')
+        hayagui_count = 0
         while(True):
             acc = adxl345.getAxes(True)
             if (index == 0):
@@ -55,8 +79,10 @@ def main():
                 filtered_acc[index] = lowpass3d(filtered_acc[index - 1], acc)
             abs_acc = abs3d(filtered_acc[index])
             if (abs_acc > (1 + THRESHOLD) or abs_acc < (1 - THRESHOLD)):
-                # TODO: ビープ音を鳴らす
                 GPIO.output(PIN_BEEP, 1)
+                # TODO: ビリビリ
+                hayagui_count += 1
+                print('HAYAGUI NOW!')
             else:
                 GPIO.output(PIN_BEEP, 0)
             # print('x: {0:.3f}'.format(filtered_acc[index]['x']))
@@ -65,10 +91,12 @@ def main():
             index = (index + 1) % BUF_SIZE
             sleep(0.1)
             if (GPIO.input(PIN_STARTSW) == 1):
-                print('ごちそうさまでした！')
+                try:
+                    print('ごちそうさまでした！')
+                    finish_eating(eating_id, hayagui_count)
+                except:
+                    print('server down?')
                 break
-    except KeyboardInterrupt:
-        GPIO.cleanup()
     finally:
         GPIO.cleanup()
 
