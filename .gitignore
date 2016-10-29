@@ -23,3 +23,8 @@
 # vim
 *.swp
 *~
+
+node_modules
+
+# python
+*.pyc
