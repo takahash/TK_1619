@@ -1427,3 +1427,6 @@ Unpermitted parameter: session
 Completed 200 OK in 321ms (Views: 0.4ms | ActiveRecord: 10.8ms)
 
 
+Started GET "/api/v1/logs/public" for ::1 at 2016-10-30 11:28:42 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mLog Load (1.0ms)[0m  [1m[34mSELECT "logs".* FROM "logs"[0m
