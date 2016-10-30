@@ -51,8 +51,8 @@ Shock Sticksはマイコンを備えた箸とウェブアプリから構成さ�
 * SQLite3
 
 ##### フロントエンド
-*　　Onsen-UI
-* React.js
+*　Onsen-UI
+*　React.js
 
 ##### デバイス
 * Raspberry Pi
