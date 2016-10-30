@@ -80,7 +80,8 @@ def main():
             abs_acc = abs3d(filtered_acc[index])
             if (abs_acc > (1 + THRESHOLD) or abs_acc < (1 - THRESHOLD)):
                 GPIO.output(PIN_BEEP, 1)
-                # TODO: ビリビリ
+                sleep(0.3)
+                GPIO.output(PIN_BEEP, 0)
                 hayagui_count += 1
                 print('HAYAGUI NOW!')
             else:
@@ -89,7 +90,7 @@ def main():
             # print('y: {0:.3f}'.format(filtered_acc[index]['y']))
             # print('z: {0:.3f}'.format(filtered_acc[index]['z']))
             index = (index + 1) % BUF_SIZE
-            sleep(0.1)
+            sleep(0.2)
             if (GPIO.input(PIN_STARTSW) == 1):
                 try:
                     print('ごちそうさまでした！')
