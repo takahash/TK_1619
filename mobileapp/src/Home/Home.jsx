@@ -12,19 +12,18 @@ export default class Home extends React.Component {
       latest: {
         startTime: new Date(),
         endTime: new Date(),
-        count: 0,
+        count: 3,
       },
     };
   }
 
   componentDidMount() {
-    // fetch(`${api.BASE}/logs/public`, {
-    //   method: 'GET',
-    //   headers: {
-    //     'Content-Type': 'application/json',
-    //   },
-    // })
-    fetch('../dev/log.json')
+    fetch(`${api.BASE}/logs/public`, {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    })
       .then(response => {
         return response.json();
       })
@@ -43,16 +42,14 @@ export default class Home extends React.Component {
   }
 
   render() {
+    const logo = require('../assets/logo.png');
     return (
-      <Page
-        renderToolbar={() =>
-          <Toolbar>
-            <div className='center'>ほーむ</div>
-          </Toolbar>
-        }
-      >
-        <div>
-          <span>こんにちは、{this.state.username}さん。</span>
+      <Page>
+        <div className="logo">
+          <img src={logo} width="300" />
+        </div>
+        <div className="msg">
+          こんにちは、{this.state.username}さん。
         </div>
 
         <div className="latest">

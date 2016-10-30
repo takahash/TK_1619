@@ -6,6 +6,9 @@ import {List, ListItem} from 'react-onsenui';
 export default class Settings extends React.Component {
   constructor(props) {
     super(props);
+    this.state = {
+      chopsticks: false,
+    };
   }
 
   componentDidMount() {
@@ -22,27 +25,38 @@ export default class Settings extends React.Component {
     );
   }
 
+  handleOpenChopsticksSettings() {
+    this.setState({
+      chopsticks: true,
+    });
+  }
+
   render() {
-    const now = new Date();
-    console.log('now', now);
-
-    const data = [
-      {
-        month: '10',
-        day: '21',
-      },
-      {
-        month: '12',
-        day: '24',
-      },
-    ]
-
     return (
-      <Page>
-        <List
-          renderRow={this.renderRow}
-          dataSource={data}
-        />
+      <Page
+        renderToolbar={() =>
+          <Toolbar>
+            <div className="center">設定</div>
+          </Toolbar>
+        }
+      >
+        <List>
+          <ListItem key={0} tappable>
+            ユーザ情報
+          </ListItem>
+          <ListItem
+            key={1}
+            onClick={this.handleOpenChopsticksSettings}
+            tappable
+          >
+            箸の登録
+          </ListItem>
+          {this.state.chopsticks &&
+            <div>
+              Hello
+            </div>
+          }
+        </List>
       </Page>
     );
   }
