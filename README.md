@@ -12,7 +12,9 @@
 そんな彼らを助けるために、我々はIoTを駆使した画期的なデバイスを解決したのであった。
 
 ### 製品説明（具体的な製品の説明）
-![Shock Sticks_system](http://ueqareer.net/wp-content/uploads/2016/10/Shock-Sticks-system-.png)
+
+![Shock Sticks_system](http://ueqareer.net/wp-content/uploads/2016/10/Shock-Sticks-system-.png)　　
+
 Shock Sticksはマイコンを備えた箸とウェブアプリから構成される。  
 箸には速度情報のとれる加速度センサと電流を流す電極が搭載され、それぞれがラズベリーパイにつながって制御されている。  
 箸が素早く動く（つまり早食いをする）のを感知するとラズベリーパイから電流を流す命令がおりる。  
@@ -38,8 +40,6 @@ Shock Sticksはマイコンを備えた箸とウェブアプリから構成さ�
 ## 開発技術
 ### 活用した外部技術
 #### API・データ
-* 
-* 
 
 #### フレームワーク・ライブラリ・モジュール
 
