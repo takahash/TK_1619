@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import {Tabbar, Tab} from 'react-onsenui';
 
 import Home from './Home/Home';
-import Graph from './Graph';
+import Log from './Log/Log';
 import Settings from './Settings/Settings';
 
 export default class App extends React.Component {
@@ -18,8 +18,8 @@ export default class App extends React.Component {
         tab: <Tab label='ホーム' icon='md-home' />
       },
       {
-        content: <Graph />,
-        tab: <Tab label='グラフ' icon='fa-line-chart' />
+        content: <Log />,
+        tab: <Tab label='ログ' icon='fa-line-chart' />
       },
       {
         content: <Settings />,
